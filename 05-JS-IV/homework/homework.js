@@ -24,7 +24,6 @@ function agregarPropiedad(objeto, property) {
   return objeto;
 }
 
-
 function invocarMetodo(objeto, metodo) {
   // "metodo" es una cadena que contiene el nombre de un método (funcion) en el objeto
   // Invoca ese método
@@ -37,7 +36,7 @@ function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {
   // "objetoMisterioso" tiene una propiedad llamada "numeroMisterioso"
   // Multiplica el numeroMisterioso por 5 y devuelve el producto
   // Tu código:
-  return objetoMisterioso.numeroMisterioso*5;
+  return objetoMisterioso.numeroMisterioso * 5;
 }
 
 function eliminarPropiedad(objeto, unaPropiedad) {
@@ -51,20 +50,19 @@ function nuevoUsuario(nombre, email, password) {
   // Crea un nuevo objeto con las propiedades coincidiendo con los argumentos que se pasan a la función
   // Devuelve el objeto
   // Tu código:
-  const objeto= {}
-
-  objeto[nombre];
-  objeto[email];
-  objeto[password]
-  
+  const objeto = {
+    nombre: `${nombre}`,
+    email: `${email}`,
+    password: `${password}`,
+  };
   return objeto;
-
 }
 
 function tieneEmail(usuario) {
   // Devuelve "true" si el usuario tiene un valor definido para la propiedad "email"
   // De lo contrario, devuelve "false"
   // Tu código:
+  return usuario.email ? true : false;
 }
 
 function tienePropiedad(objeto, propiedad) {
