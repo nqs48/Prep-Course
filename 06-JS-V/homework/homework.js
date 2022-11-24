@@ -36,17 +36,8 @@ function agregarMetodoPrototype(Constructor) {
   // Agrega un método al Constructor del `prototype`
   // El método debe llamarse "saludar" y debe devolver la string "Hello World!"
   // Tu código:
-  let c= Constructor;
-
-  return class c{
-
-    constructor(){
-      this.saludar();
-    }
-
-    saludar(){
-      return "Hello World!"
-    }
+  Constructor.prototype.saludar= function(){
+    return "Hello World!";
   }
 }
 
@@ -56,6 +47,9 @@ function agregarStringInvertida() {
   // Ej: 'menem'.reverse() => menem
   // 'toni'.reverse() => 'inot'
   // Pista: Necesitarás usar "this" dentro de "reverse"
+  prototype.reverse= function(){
+    return this.reverse();
+  }
 }
 
 // ---------------------------------------------------------------------------//
@@ -70,9 +64,26 @@ function agregarStringInvertida() {
     //  }
 
   class Persona {
-    constructor(/*Escribir los argumentos que recibe el constructor*/) {
+    nombre;
+    apellido;
+    edad;
+    domicilio;
+    constructor(/*Escribir los argumentos que recibe el constructor*/nombre, apellido, edad , domicilio) {
       // Crea el constructor:
+      this.nombre=nombre
+      this.apellido=apellido;
+      this.edad=edad;
+      this.domicilio=domicilio;
 
+    }
+
+    detalle(){
+      let a= {
+        nombre=this.nombre
+      }
+      return {
+        this.nombre;
+      }
     }
 }
 
